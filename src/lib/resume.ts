@@ -19,15 +19,6 @@ export const profile = {
   ],
 };
 
-export const portfolio = {
-  title: "Personal Portfolio",
-  description:
-    "My live portfolio website — designed, built and shipped with Next.js and Tailwind CSS, deployed on Vercel.",
-  live: "https://port-folio-git-main-hashim7708s-projects.vercel.app/",
-  source: "https://github.com/hashim7708/port-folio",
-  tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-};
-
 export const skills = [
   "Next.js",
   "React.js",
