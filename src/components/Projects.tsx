@@ -1,4 +1,4 @@
-import { projects } from "@/lib/resume";
+import { portfolio, projects } from "@/lib/resume";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { ExternalLinkIcon, FolderIcon, SourceIcon } from "./Icons";
@@ -10,7 +10,57 @@ export default function Projects() {
         <SectionHeading index="03" title="Selected Projects" />
       </Reveal>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <Reveal delay={100}>
+        <article className="group relative mt-12 block overflow-hidden rounded border border-line bg-gradient-to-br from-card via-card to-accent-soft p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 hover:shadow-2xl hover:shadow-black/40 md:p-10">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-accent/0 blur-3xl transition-all duration-500 group-hover:bg-accent/15"
+          />
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <a href={portfolio.live} target="_blank" rel="noopener noreferrer"
+              className="group/link max-w-xl">
+              <p className="font-mono text-sm text-accent">
+                Featured · Live now
+              </p>
+              <h3 className="mt-4 text-2xl font-bold text-ink transition-colors group-hover/link:text-accent md:text-3xl">
+                {portfolio.title}
+              </h3>
+              <p className="mt-3 leading-relaxed text-mute">
+                {portfolio.description}
+              </p>
+              <ul className="mt-5 flex list-none flex-wrap gap-x-5 gap-y-2">
+                {portfolio.tech.map((tech) => (
+                  <li key={tech} className="font-mono text-xs text-dim">
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </a>
+            <div className="flex items-center gap-5 text-ink transition-colors group-hover:text-accent">
+              <a
+                href={portfolio.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${portfolio.title} source code`}
+                className="transition-all hover:-translate-y-0.5"
+              >
+                <SourceIcon className="h-6 w-6" />
+              </a>
+              <a
+                href={portfolio.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${portfolio.title} live site`}
+                className="transition-all hover:-translate-y-0.5"
+              >
+                <ExternalLinkIcon className="h-6 w-6" />
+              </a>
+            </div>
+          </div>
+        </article>
+      </Reveal>
+
+      <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, i) => (
           <Reveal key={project.title} delay={i * 80}>
             <article className="group relative flex h-full flex-col overflow-hidden rounded border border-line bg-card p-6 transition-all duration-300 hover:-translate-y-2 hover:border-accent/50 hover:shadow-2xl hover:shadow-black/40">

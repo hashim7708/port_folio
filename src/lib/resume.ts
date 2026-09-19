@@ -13,10 +13,19 @@ export const profile = {
     "Currently working as a frontend developer and always sharpening my skills in modern web technologies.",
   ],
   socials: [
-    { label: "GitHub", href: "https://github.com/" },
+    { label: "GitHub", href: "https://github.com/hashim7708" },
     { label: "LinkedIn", href: "https://www.linkedin.com/" },
     { label: "Email", href: "mailto:mh6811172@gmail.com" },
   ],
+};
+
+export const portfolio = {
+  title: "Personal Portfolio",
+  description:
+    "My live portfolio website — designed, built and shipped with Next.js and Tailwind CSS, deployed on Vercel.",
+  live: "https://port-folio-git-main-hashim7708s-projects.vercel.app/",
+  source: "https://github.com/hashim7708/port-folio",
+  tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
 };
 
 export const skills = [
