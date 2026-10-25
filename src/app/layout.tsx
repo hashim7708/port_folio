@@ -13,9 +13,15 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Hashim — Web Developer",
+  title: "Muhammad Hashim — Full Stack Developer",
   description:
-    "Full-stack web developer from Rawalpindi, Pakistan building things for the web with Next.js, React, Node.js and MongoDB.",
+    "Full stack developer from Faisalabad, Pakistan, available for remote roles. I build web apps with React, Next.js, Node.js, FastAPI and PostgreSQL, and add AI features with the OpenAI API.",
+  openGraph: {
+    title: "Muhammad Hashim — Full Stack Developer",
+    description:
+      "Full stack developer building web apps and AI features with React, Next.js, Node.js, FastAPI and the OpenAI API.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
