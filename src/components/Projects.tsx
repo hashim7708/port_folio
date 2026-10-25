@@ -24,30 +24,37 @@ export default function Projects() {
               <div className="flex items-start justify-between">
                 <FolderIcon className="h-10 w-10 text-accent" />
                 <div className="flex items-center gap-4 text-ink">
-                  <a
-                    href={project.links.source}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${project.title} source code`}
-                    className="transition-all hover:text-accent hover:-translate-y-0.5"
-                  >
-                    <SourceIcon />
-                  </a>
-                  <a
-                    href={project.links.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${project.title} live site`}
-                    className="transition-all hover:text-accent hover:-translate-y-0.5"
-                  >
-                    <ExternalLinkIcon />
-                  </a>
+                  {project.links.source && (
+                    <a
+                      href={project.links.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.title} source code`}
+                      className="transition-all hover:text-accent hover:-translate-y-0.5"
+                    >
+                      <SourceIcon />
+                    </a>
+                  )}
+                  {project.links.live && (
+                    <a
+                      href={project.links.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.title} live site`}
+                      className="transition-all hover:text-accent hover:-translate-y-0.5"
+                    >
+                      <ExternalLinkIcon />
+                    </a>
+                  )}
                 </div>
               </div>
 
               <h3 className="mt-6 text-xl font-semibold text-ink transition-colors group-hover:text-accent">
                 {project.title}
               </h3>
+              {project.role && (
+                <p className="mt-1 font-mono text-xs text-dim">{project.role}</p>
+              )}
               <p className="mt-3 flex-1 text-sm leading-relaxed text-mute">
                 {project.description}
               </p>

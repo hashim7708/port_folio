@@ -1,20 +1,19 @@
 export const profile = {
   name: "Muhammad Hashim",
   initials: "MH",
-  role: "Web Developer",
+  role: "Full Stack Developer",
   intro: "I build things for the web.",
   email: "mh6811172@gmail.com",
   phone: "0349-5137424",
   phoneLink: "tel:+923495137424",
-  location: "Rawalpindi, Pakistan",
+  location: "Faisalabad, Pakistan",
   summary: [
-    "An enthusiastic web developer based in Rawalpindi who loves turning ideas into fast, reliable and pleasant-to-use web applications.",
-    "I enjoy working across the full stack — from designing REST APIs in FastAPI or Node.js to crafting responsive UIs with Next.js, React and Tailwind CSS. I have a history of completing work to professional standards, meeting strict deadlines and keeping a sharp eye on the details.",
-    "Currently working as a frontend developer and always sharpening my skills in modern web technologies.",
+    "A full stack developer based in Faisalabad who builds fast, reliable and pleasant-to-use web applications, and adds AI features such as chatbots, report analysis and image generation through the OpenAI API.",
+    "I enjoy working across the whole stack, from designing REST APIs in FastAPI or Node.js to crafting responsive interfaces with Next.js, React and Tailwind CSS, backed by PostgreSQL. I deliver work to professional standards, meet deadlines and keep a sharp eye on the details.",
+    "Currently a full stack developer at Exprtec, available for remote roles and always sharpening my skills in modern web technologies.",
   ],
   socials: [
     { label: "GitHub", href: "https://github.com/hashim7708" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/" },
     { label: "Email", href: "mailto:mh6811172@gmail.com" },
   ],
 };
@@ -26,15 +25,17 @@ export const skills = [
   "JavaScript",
   "Node.js",
   "Express",
+  "FastAPI",
+  "Python",
+  "PostgreSQL",
   "MongoDB",
+  "OpenAI API",
   "MUI 5",
   "Redux Toolkit",
   "Tailwind CSS",
   "Bootstrap",
   "HTML",
   "CSS",
-  "FastAPI",
-  "Python",
   "AWS",
 ];
 
@@ -53,71 +54,74 @@ export const education = [
 
 export const experience = [
   {
-    company: "Bin-Nisar",
-    role: "Frontend Developer",
+    company: "Exprtec",
+    role: "Full Stack Software Developer",
     period: "Feb 2024 — Present",
     current: true,
     points: [
-      "Build responsive, accessible user interfaces with React, Next.js and Tailwind CSS.",
-      "Collaborate with backend engineers to shape both frontend and backend features.",
-      "Review code, debug issues and keep the product consistent across browsers.",
+      "Built an automated messaging system using AI chatbots powered by the OpenAI API, integrated into backend workflows to automate communication and reduce manual effort.",
+      "Built an AI feature that generates house floor plan images from property measurements uploaded by users.",
+      "Developed algorithms for Imagini Health, an AI veterinary imaging platform, to identify issues in radiology reports and automate a manual review task.",
+      "Designed and implemented RESTful APIs using FastAPI and Node.js, and built the React frontends and PostgreSQL schemas behind them to support marketing strategies and campaigns.",
+    ],
+    tech: ["FastAPI", "Node.js", "React", "PostgreSQL", "OpenAI API"],
+  },
+  {
+    company: "Bin-Nisar",
+    role: "Frontend Developer",
+    period: "Apr 2023 — Dec 2023",
+    points: [
+      "Built and maintained frontend components and user interfaces as part of a collaborative delivery team.",
+      "Supported backend development tasks, contributing to features from interface to server logic.",
     ],
     tech: ["React", "Next.js", "Tailwind CSS", "Node.js"],
   },
   {
-    company: "Exprtec",
-    role: "Full Stack Software Developer",
-    period: "Sep 2023 — Dec 2023",
-    points: [
-      "Designed and implemented RESTful APIs using FastAPI and Node.js.",
-      "Built the frontend for features that support marketing strategies and campaigns aligned with company goals.",
-      "Shipped full-stack features from database schema to polished UI.",
-    ],
-    tech: ["FastAPI", "Node.js", "React", "MongoDB"],
-  },
-  {
-    company: "Innovative Tech",
-    role: "MERN Stack Junior",
-    period: "Apr 2023 — Jul 2023",
-    points: [
-      "Contributed to the creation of both frontend and backend of MERN applications.",
-      "Built reusable components and gained hands-on experience with MongoDB and Express.",
-      "Participated in daily standups and feature planning with the team.",
-    ],
-    tech: ["MongoDB", "Express", "React", "Node.js"],
-  },
-  {
     company: "Saphona",
     role: "Frontend Developer",
-    period: "2023",
+    period: "Aug 2021 — Aug 2022",
     points: [
-      "Helped create both frontend and backend for the Saphona marketplace web app.",
+      "Developed responsive frontend interfaces and assisted with backend development for the Saphona marketplace web app.",
       "Translated designs into clean, maintainable code while improving performance.",
     ],
     tech: ["React", "CSS", "Bootstrap"],
   },
 ];
 
-export const projects = [
+export type Project = {
+  title: string;
+  role?: string;
+  description: string;
+  tech: string[];
+  links: {
+    live?: string;
+    source?: string;
+  };
+};
+
+export const projects: Project[] = [
   {
-    title: "Marketplace Web App",
+    title: "NDIS Provider Review",
+    role: "Full Stack Developer · Exprtec",
     description:
-      "A multi-vendor marketplace with product listings, carts, checkout and order tracking. Built a shared API and responsive storefront from the ground up.",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
-    links: { live: "#", source: "https://github.com/" },
+      "Searchable directory of 8,460+ registered NDIS providers across Australia, with suburb-level search, reviews and provider profiles.",
+    tech: ["Full Stack", "Search", "Directory"],
+    links: { live: "https://ndisprovider.review" },
   },
   {
-    title: "Campaign Dashboard & REST APIs",
+    title: "Imagini Health",
+    role: "Full Stack Developer · Exprtec",
     description:
-      "Analytics dashboard for marketing campaigns — REST APIs in FastAPI/Node.js powering charts, campaign tracking and reports aligned with company goals.",
-    tech: ["FastAPI", "Next.js", "Chart.js", "AWS"],
-    links: { live: "#", source: "https://github.com/" },
+      "AI-powered diagnostic imaging platform for veterinary practices and pet owners. I built the algorithms that identify issues in radiology reports, automating a manual review task.",
+    tech: ["Full Stack", "AI", "Report Analysis"],
+    links: { live: "https://www.imaginihealth.ai" },
   },
   {
-    title: "E-commerce Storefront",
+    title: "ListingSight",
+    role: "Full Stack Developer · Exprtec",
     description:
-      "A product storefront for a consumer brand with catalog pages, filters, cart state managed with Redux Toolkit and a clean Tailwind + MUI UI.",
-    tech: ["Next.js", "TypeScript", "Redux Toolkit", "MUI 5"],
-    links: { live: "#", source: "https://github.com/" },
+      "AI virtual staging and listing-description tool that helps Australian real estate agents turn empty-room photos into furnished listings.",
+    tech: ["Full Stack", "AI", "Real Estate"],
+    links: { live: "https://listingsight.com" },
   },
 ];
